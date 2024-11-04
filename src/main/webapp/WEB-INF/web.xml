@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    <servlet>
+        <servlet-name>MyServlet</servlet-name>
+        <servlet-class>MyServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginSeverlet</servlet-name>
+        <servlet-class>net.codejava.webprj2.LoginSeverlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HomeServelet</servlet-name>
+        <servlet-class>net.codejava.webprj2.HomeServelet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProvinceServelet</servlet-name>
+        <servlet-class>net.codejava.webprj2.ProvinceServelet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DatabaseServlet</servlet-name>
+        <servlet-class>net.codejava.webprj2.DatabaseServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>In4UserServlet</servlet-name>
+        <servlet-class>net.codejava.webprj2.In4UserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyServlet</servlet-name>
+        <url-pattern>/MyServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginSeverlet</servlet-name>
+        <url-pattern>/LoginSeverlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HomeServelet</servlet-name>
+        <url-pattern>/HomeServelet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProvinceServelet</servlet-name>
+        <url-pattern>/ProvinceServelet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DatabaseServlet</servlet-name>
+        <url-pattern>/DatabaseServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>In4UserServlet</servlet-name>
+        <url-pattern>/In4UserServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <resource-ref>
+        <description>Database Connection</description>
+        <res-ref-name>jdbc/MyDB</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+</web-app>
